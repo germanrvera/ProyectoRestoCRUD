@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 1 1.5em;   
+    font-family: aktiv-grotesk, sans-serif;}
+
+.reservas {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reservas__titulo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.reservas__wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.reservas__wrapper > * {
+    padding: 1em;
+}
+
+.reservas__form {
+    background: #ca8127;
+}
+
+#lista{
+    padding-top: 2%;
+    padding-bottom:5%;
+}
+
+
+.reservas__form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.reservas__form form label {
+    display: block;
+}
+
+.reservas__form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.reservas__form form .formato {
+    color: black;
+}    
+
+.reservas__form form .block {
+    grid-column: 1 / 3;
+}
+
+.reservas__form form input,
+.reservas__form form select,
+.reservas__form form textarea {
+    width: 100%;
+    padding: .7em;
+    background: white;
+    color: black;
+}
+
+.reservas__form form button {
+    width: 100%;    
+    background: rgb(29,171,209);
+    text-transform: uppercase;
+    color: white;    
+    padding: 1em;
+    border-radius: .5rem;
+    border-style: none;
+    
+}
+
+.boton__editar{
+    text-decoration: none;
+    color: white;
+}
+
+.reservas__form form button:hover,
+.reservas__form form button:focus {
+    background: #d63031;
+    color: white;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.reservas__info {
+    background: #cca779;
+}
+
+.reservas__info h4, 
+.reservas__info ul, 
+.reservas__info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+} 
+
+.reservas__info ul {
+    list-style: none;
+    padding: 0;
+} 
+
+.reservas__info ul li {
+    padding: 0;
+}
+
+.botones{
+
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+
+
+}
+
+#azul{
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+@media(min-width: 768px) {
+    body {
+        padding: 0 ;
+    }
+
+    .reservas__wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .reservas__wrapper > * {
+        padding: 2em;
+    }
+    
+    .reservas__info h4,
+    .reservas__info ul,
+    .reservas__info p {
+        text-align: left;
+    }    
+}

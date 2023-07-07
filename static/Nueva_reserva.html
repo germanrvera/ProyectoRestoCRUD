@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/cabecera/cabecera.css">
+    <link rel="stylesheet" href="css/rodapie/rodapie.css">
+    <link rel="stylesheet" href="css/reservas/reservas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/resto/outline_restaurant_white_24dp.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    
+    <title>Reservas</title>
+</head>
+<body>
+    <header class="cabecera">
+        <h3 class="nombre__resto">El Sabor Argentino</h3>
+        <nav class="cabecera__menu">
+        <ul class="menu__lista">
+            <li class="menu__item"><a class="menu__link" href="../index.html" >INICIO</a></li>
+            <li class="menu__item"><a class="menu__link" href="Nosotros.html" >NOSOTROS</a></li>
+            <li class="menu__item"><a class="menu__link" href="Menu.html" >MENÚ</a></li>
+            <li class="menu__item"><a class="menu__link" href="Ubicacion.html" >UBICACIÓN</a></li>
+            <li class="menu__item"><a class="menu__link--activo" href="">RESERVAS</a></li>
+    
+       </ul>
+        </nav>
+  
+</header>
+<section>
+<div class="reservas">
+
+  <h1 class="reservas__titulo"> Reservas </h1>
+
+  <div class="reservas__wrapper">
+    <div class="reservas__form">
+      <h3>Reserva tu mesa</h3>
+
+      <!-- <form id="form" action="http://localhost:5000/reservas" class="form" method="post" > -->
+        <form id="form" action="https://germanrvera.pythonanywhere.com/reservas" class="form" method="post" >
+        <p class="block">
+          <label for="nombre">Nombre:<span>*</span></label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Juan">
+        </p>
+
+        <p>
+          <label for="email">Correo electrónico:<span>*</span></label>
+          <input type="email" id="email" name="email" required placeholder="juan@mail.com">
+        </p>
+        <p>
+          <label for="telefono">Teléfono:<span>*</span></label>
+          <input type="tel" id="telefono" name="telefono" required placeholder="1112341234">
+          
+        </p>
+        <p>
+          <label for="fecha">Fecha:<span>*</span></label>
+          <input type="date" id="fecha" name="fecha" required min="tod">
+        </p>
+        <p>
+
+          <label for="hora" >Hora:<span>*</span></label>
+          <input type="time" name="hora" id="hora">
+         
+        </p>
+        <p>
+          <label for="personas">Número de personas:<span>*</span></label>
+          <input type="number" max="8" min="1" id="numPer" name="numPer" required placeholder="1">
+        </p>
+
+        <p class="block">
+          <label for="comentarios">Comentarios</label>
+          <input type="text" name="coment" id="coment" length="100">
+          
+        </p>
+        <p class="block">
+          <button type="button" onclick="guardar()">Reservar</button>
+        </p>
+        
+        <p class="block">
+          <button>
+            
+            <a class="boton__editar" href="Reservas.html">Modificar / Eliminar reserva</a>
+            
+          </button>
+        </p>
+
+        
+      </form>
+
+    </div>
+    <div class="reservas__info">
+      <h4>Información Reservas</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> A. Moreau de Justo 1720. CABA </li>
+        <li><i class="fas fa-phone"></i> 11-1234-5678 </li>
+        <li><i class="fas fa-envelope-open-text"></i> elsaborargentino2023@gmail.com </li>
+      </ul>
+      <p>Las reservas se pueden efectuar desde el día anterior a la fecha requerida.</p>
+      <p>
+        Tolerancia 15 minutos.
+      </p>
+      <p>
+        Para ser ubicados deberá estar presente el 50% del grupo.
+      </p>
+      <p></p>
+      <h4>Formas de Pago</h4>
+      <p>Aceptamos todas las tarjetas</p>
+      <p>Cotización del dolar: $  <span id="lon"></span></p>
+      <p></p>
+      <p></p>
+      <p>www.elsaborargentino.com</p>
+    </div>
+  </div>
+</div>
+</section>
+<footer class="rodapie">
+    <h3 class="rodapie__titulo">2023 - El Sabor Argentino</h3>
+    <p class="rodapie__descripcion">&copy Copyright - Diseñado y desarrollado por el Equipo 16</p>
+    <ul class="rodapie__lista">
+        <li class="rodapie__item"><a class="rodapie__icon" href="Contacto.html" target="_blank"><img  src="img/resto/email.png" alt="Email"></a></li>
+        <li class="rodapie__item"><a class="rodapie__icon" href="https://www.instagram.com/elsaborargentino2023" target="_blank"><img  src="img/resto/instagram.png" alt="Instagram"></a></li>
+        <li class="rodapie__item"><a class="rodapie__icon" href=""><img  src="img/resto/facebook.png" alt="Facebook"></a></li>
+    </ul>
+</footer>
+
+
+<script src="js/reserva_nuevo.js"></script> 
+<script src="js/validacion.js"></script>
+<script src="js/APIDolar.js"></script>  
+<script src="js/calendario.js"></script>    
+</body>
+</html>

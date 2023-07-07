@@ -1,0 +1,263 @@
+.quienes {
+
+    padding: 5rem;
+    text-align: center;
+    
+}
+
+.quienes__titulo {
+    color: #000000;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-size: 3.1875rem;
+    margin-bottom: 1rem;
+}
+
+.quienes__descripcion{
+
+    color: #000000;
+    font-size: 1.35rem;
+    font-weight: 100;
+    font-family: aktiv-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.experiencia {
+
+    padding: 5rem;
+    text-align: center;
+    --opacidad-negro: 0.4;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../../img/resto/bistro-g174bfd5fd_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+    
+}
+
+.experiencia__titulo {
+    color: #FFFFFF;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-size: 4.1875rem;
+    margin-bottom: 1rem;
+}
+
+.experiencia__descripcion{
+
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: aktiv-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    
+    
+
+}
+
+.historia {
+
+    padding: 5rem;
+    text-align: center;
+    --opacidad-negro: 0.3;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../../img/resto/restaurant-g9f9f635d5_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.historia__titulo {
+    color: #FFFFFF;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-size: 4.1875rem;
+    margin-bottom: 1rem;
+    
+}
+
+.historia__descripcion{
+
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: aktiv-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.menu {
+
+    padding: 5rem;
+    text-align: center;
+    
+}
+
+.menu__titulo {
+    color: #000000;
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-size: 3.1875rem;
+    margin-bottom: 1rem;
+}
+
+.menu__descripcion{
+
+    color: #000000;
+    font-size: 1.35rem;
+    font-weight: 100;
+    font-family: aktiv-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.persona {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+
+}
+
+.persona__nombre {
+    color: #da2b1f;
+    font-family: aktiv-grotesk, sans-serif;
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: 600;
+
+}
+
+.persona__imagen {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    
+    }
+
+    .persona__funcion {
+        color: #595959;
+        font-size: 1.25rem;
+        text-transform: lowercase;
+        font-family: aktiv-grotesk, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+    }
+    
+    .persona__imagen--gustavo {
+    
+        background-image: url(../../img/personas/chef1.jpg);
+    
+    }
+    
+    .persona__imagen--alan {
+    
+        background-image: url(../../img/personas/chef2.jpg);
+        
+    }
+    
+    .persona__imagen--jose {
+    
+        background-image: url(../../img/personas/chef3.jpg);
+        
+    }
+    
+    .persona__imagen--german {
+    
+        background-image: url(../../img/personas/chef4.jpg);
+        
+    }
+
+
+@media screen and (min-width: 1024px){
+
+    .persona {
+
+        margin-bottom: 0;
+         
+    }
+    
+}
+
+.nosotros {
+
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+
+@media screen and (min-width: 0){
+    .persona {
+
+        margin-bottom: 2rem;
+    }
+
+    .personas {
+
+        flex-direction: column;
+    }
+
+    .historia__titulo {
+        
+        font-size: 3.1875rem;
+        
+        
+    }
+
+    .experiencia__titulo {
+        
+        font-size: 2.5875rem;
+        
+      
+        
+    }
+    
+}
+
+
+
+@media screen and (min-width: 1024px){
+
+    .personas {
+
+      flex-direction: row;
+         
+    }
+    .historia__titulo {
+        
+        font-size: 4.1875rem;
+        
+        
+    }
+
+    .persona {
+
+        margin-bottom: 0;
+         
+    }
+
+    .experiencia__titulo {
+        
+        font-size: 4.1875rem;
+       
+        
+    }
+    
+}
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/cabecera/cabecera.css">
+  <link rel="stylesheet" href="css/rodapie/rodapie.css">
+  <link rel="stylesheet" href="css/contacto/contacto.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/resto/outline_restaurant_white_24dp.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <title>Contacto</title>
+</head>
+
+<body>
+  <header class="cabecera">
+ 
+    <h3 class="nombre__resto">El Sabor Argentino</h3>
+    <nav class="cabecera__menu">
+        <ul class="menu__lista">
+            <li class="menu__item"><a class="menu__link" href="../index.html" >INICIO</a></li>
+            <li class="menu__item"><a class="menu__link" href="Nosotros.html" >NOSOTROS</a></li>
+            <li class="menu__item"><a class="menu__link" href="Menu.html" >MENÚ</a></li>
+            <li class="menu__item"><a class="menu__link" href="Ubicacion.html" >UBICACIÓN</a></li>
+            <li class="menu__item"><a class="menu__link" href="Nueva_reserva.html" >RESERVAS</a></li>
+        </ul>
+    </nav>
+</header>
+
+ <section>
+  <div class="contacto">
+
+    <h1 class="contacto__titulo"> Contacto </h1>
+
+    <div class="contacto__wrapper">
+      <div class="contacto__form">
+        <h3>Contacto</h3>
+
+        <form id="form" action="" class="form">
+          <p>
+            <label for="nombre">Nombre:<span>*</span></label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Juan">
+          </p>
+
+          <p>
+            <label for="email">Correo electrónico:<span>*</span></label>
+            <input type="email" id="email" name="email" required placeholder="juan@mail.com">
+          </p>
+
+          <p class="block">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </p>
+          <p class="block">
+            <button type="submit" class="btn primary full">enviar mensaje</button>
+          </p>
+
+
+        </form>
+        <a href="mailto:elsaborargentino2023@gmail.com" id="trucazo"></a>        
+
+      </div>
+      <div class="contacto__info">
+        <h4>Informacion Contacto</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> A. Moreau de Justo 1720. CABA</li>
+          <li><i class="fas fa-phone"></i> 11-1234-5678</li>
+          <li><i class="fas fa-envelope-open-text"></i> elsaborargentino2023@gmail.com</li>
+        </ul>
+        <p>Sus comentarios son muy valiosos para nosotros, ya sea para mejorar o para continuar brindándole un servicio acorde al que nuestros clientes se merecen.</p>
+        <p>elsaborargentino.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="rodapie">
+    <h3 class="rodapie__titulo">2023 - El Sabor Argentino</h3>
+    <p class="rodapie__descripcion">&copy Copyright - Diseñado y desarrollado por el Equipo 16</p>
+    <ul class="rodapie__lista">
+      <li class="rodapie__item"><a class="rodapie__icon" href=""><img src="img/resto/email.png" alt="Email"></a></li>
+      <li class="rodapie__item"><a class="rodapie__icon" href="https://www.instagram.com/elsaborargentino2023" target="_blank"><img src="img/resto/instagram.png" alt="Instagram"></a></li>
+      <li class="rodapie__item"><a class="rodapie__icon" href=""><img src="img/resto/facebook.png" alt="Facebook"></a>
+      </li>
+    </ul>
+  </footer>
+
+
+  <script>
+    const $form = document.querySelector('#form')
+    const $buttonMailto = document.querySelector('#trucazo')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      $buttonMailto.setAttribute('href', `mailto:elsaborargentino2023@gmail.com?subject=Contacto de ${form.get('nombre')} &body=${form.get('mensaje')}`)
+      $buttonMailto.click()
+    }
+  </script>
+
+</body>
+
+</html>
